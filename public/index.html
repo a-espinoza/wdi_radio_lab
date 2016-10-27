@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="wdi_radio_lab">
+<html data-ng-app="wdiRadio">
   <head>
     <title>WDI_Radio</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -7,15 +7,37 @@
   <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link href="stylesheet.css" rel="stylesheet" type="text/css" >
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
   <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDdX-V5MBVxEpzw74FNGx7ESq1YmOL9Ntc",
+    authDomain: "wdiradio-138ac.firebaseapp.com",
+    databaseURL: "https://wdiradio-138ac.firebaseio.com",
+    storageBucket: "wdiradio-138ac.appspot.com",
+    messagingSenderId: "835112297783"
+  };
+  firebase.initializeApp(config);
+  </script>
     <script src="js/app.js"></script>
-
   </head>
+
   <body>
-    <header>WDI Radio</header>
-
-    Welcome to the World's Best Song App
 
 
+    <div class="welcome">
+    <h1>Welcome to the World's Best Song App</h1>
+    <a class="pure-button" href="/">home</a>
+    <a class="pure-button" href="/#/songs">mySongs</a>
+
+    </div>
+
+
+    <main data-ui-view></main>
   </body>
 </html>

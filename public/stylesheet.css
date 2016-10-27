@@ -1,0 +1,17 @@
+html{
+  font-family: Helvetica;
+}
+
+.song-wrapper{
+  border:10px solid red;
+  margin: auto;
+}
+
+.welcome{
+position:fixed !important;
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+left:0;
+}
